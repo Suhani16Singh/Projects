@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">SD</div>
+        <div>
+          <h1>StudentHub</h1>
+          <p>Academic Portal</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-section="dashboard">
+          <span class="nav-icon">▣</span>
+          Dashboard
+        </button>
+        <button class="nav-item" data-section="courses">
+          <span class="nav-icon">☰</span>
+          Courses
+        </button>
+        <button class="nav-item" data-section="assignments">
+          <span class="nav-icon">✎</span>
+          Assignment
+        </button>
+        <button class="nav-item" data-section="profile">
+          <span class="nav-icon">☺</span>
+          Profile
+        </button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="student-info">
+          <p class="welcome">Welcome back,</p>
+          <h2 id="studentName">Suhani Singh</h2>
+          <p class="semester" id="currentSemester">Semester 4 · Computer Science</p>
+        </div>
+      </header>
+
+      <section class="view active" id="dashboard">
+        <div class="cards">
+          <article class="card">
+            <p class="card-label">Attendance</p>
+            <h3 id="attendanceValue">92%</h3>
+            <p class="card-note positive">Above required 75%</p>
+          </article>
+          <article class="card">
+            <p class="card-label">CGPA</p>
+            <h3 id="cgpaValue">8.6</h3>
+            <p class="card-note">Out of 10.0</p>
+          </article>
+          <article class="card">
+            <p class="card-label">Assignments</p>
+            <h3 id="assignmentValue">3 due</h3>
+            <p class="card-note warning">2 pending this week</p>
+          </article>
+          <article class="card">
+            <p class="card-label">Courses</p>
+            <h3 id="courseValue">5 enrolled</h3>
+            <p class="card-note">Current semester</p>
+          </article>
+        </div>
+
+        <div class="panel">
+          <h3>This week</h3>
+          <ul class="simple-list" id="weekList"></ul>
+        </div>
+      </section>
+
+      <section class="view" id="courses">
+        <div class="panel">
+          <h3>Enrolled courses</h3>
+          <ul class="simple-list" id="courseList"></ul>
+        </div>
+      </section>
+
+      <section class="view" id="assignments">
+        <div class="panel">
+          <h3>Upcoming assignments</h3>
+          <ul class="simple-list" id="assignmentList"></ul>
+        </div>
+      </section>
+
+      <section class="view" id="profile">
+        <div class="panel profile-panel">
+          <h3>Student profile</h3>
+          <dl class="profile-grid">
+            <div>
+              <dt>Name</dt>
+              <dd id="profileName">Suhani Singh</dd>
+            </div>
+            <div>
+              <dt>Student ID</dt>
+              <dd>CS2024-1842</dd>
+            </div>
+            <div>
+              <dt>Semester</dt>
+              <dd id="profileSemester">Semester 4</dd>
+            </div>
+            <div>
+              <dt>Program</dt>
+              <dd>B.Tech Computer Science</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd>suhani.singh@college.edu</dd>
+            </div>
+            <div>
+              <dt>Advisor</dt>
+              <dd>Dr. Mehta</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
